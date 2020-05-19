@@ -15,7 +15,8 @@ public class Truco {
     private final Monte monte;
     private final int[] maoTime;
     private int pedirUltimo = -1;
-
+    private static Truco instancia = null;
+    
     private Truco() {
         jogadores = new Jogador[4];
         for (int i = 0; i < 4; i++) {
@@ -26,12 +27,9 @@ public class Truco {
         this.maoTime = new int[3];
     }
 
-    private static Truco instancia = null;
-
     public static Truco getInstancia() {
         if (instancia == null) {
             instancia = new Truco();
-
         }
         return instancia;
     }
@@ -76,7 +74,6 @@ public class Truco {
 
     public Jogador retornaJogador(int x) {
         return this.jogadores[x];
-
     }
 
     public void voltarCartas() {
@@ -133,14 +130,11 @@ public class Truco {
                                             jogadores[i].getMaoJogador().getCartasIndice(j).getNumero(),
                                             jogadores[i].getMaoJogador().getCartasIndice(j).getNaipe());
                                     indice = i;
-
                                 }
-
                             }
                         }
                         pontuacao(indice % 2);
                         rodadaTerminada = true;
-
                     }
 
                 } else {
@@ -154,11 +148,9 @@ public class Truco {
                             pontuacao(maoTime[0]);
                             rodadaTerminada = true;
                         }
-
                     } else if (qtdCartas == 0) {
                         pontuacao(maoTime[2]);
                         rodadaTerminada = true;
-
                     }
                 }
                 monte.limpaMonte();
@@ -224,7 +216,6 @@ public class Truco {
             flag = false;
             try {
                 switch (s) {
-
                     case 1:
                         this.aumentaRodada();
                         this.menuImprimirCartas();
@@ -237,13 +228,11 @@ public class Truco {
                         break;
                     default:
                         throw new OpcaoInvalidaException();
-
                 }
 
             } catch (OpcaoInvalidaException e) {
                 System.out.println(e.getMessage());
                 flag = true;
-
             }
 
         } while (flag);
@@ -266,7 +255,6 @@ public class Truco {
             try {
                 if (s < 0 || s > this.jogadores[vezRodada].getMaoJogador().getQtdCartasMao() - 1) {
                     throw new OpcaoInvalidaException();
-
                 }
 
                 Carta c1 = this.jogadores[vezRodada].getMaoJogador().getCartasIndice(s);
@@ -291,7 +279,6 @@ public class Truco {
     }
 
     private String estadoRodada() {
-
         String y;
 
         switch (this.valorRodada) {
@@ -306,7 +293,6 @@ public class Truco {
                 break;
             default:
                 y = "truco";
-
         }
         return y;
     }
@@ -325,5 +311,4 @@ public class Truco {
             vezRodada = 0;
         }
     }
-
 }
