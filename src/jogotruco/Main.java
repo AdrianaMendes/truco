@@ -1,31 +1,32 @@
 package jogoTruco;
 
 public class Main {
-	public static void main(String args[]) {
 
-		Truco truco = Truco.getInstancia();
+    public static void main(String args[]) {
 
-		System.out.println("                          ***BEM VINDO AO JOGO***         \n");
-		System.out.println("TIME 1 --> Jogador 1 e Jogador 3 \n");
-		System.out.println("TIME 2 --> Jogador 2 e Jogador 4 \n");
+        Truco truco = Truco.getInstancia();
 
-		do {
-			truco.sorteio();
-			do {
-				truco.menuJogaTruco();
-				truco.incrementaVez();
-				truco.verificaVencedor();
-				System.out.println("\nPontuaÁ„o Time 1: " + truco.getPontuacao1() + "\nPontuaÁ„o Time 2: "
-						+ truco.getPontuacao2());
+        System.out.println("                          ***BEM VINDO AO JOGO***         \n");
+        System.out.println("TIME 1 --> Jogador 1 e Jogador 3 \n");
+        System.out.println("TIME 2 --> Jogador 2 e Jogador 4 \n");
 
-			} while (!truco.isRodadaTerminada());
+        do {
+            truco.sorteio();
+            do {
+                truco.menuJogaTruco();
+                truco.incrementaVez();
+                truco.verificaVencedor();
+                System.out.println("\nPontua√ß√£o Time 1: " + truco.getPontuacao1() + "\nPontua√ß√£o Time 2: "
+                        + truco.getPontuacao2());
 
-			truco.resetaRodada();
-			truco.incrementaRodada();
+            } while (!truco.isRodadaTerminada());
 
-		} while (!truco.fimDeJogo());
+            truco.resetaRodada();
+            truco.incrementaRodada();
 
-		System.out.println("Jogador " + truco.verificaPontuacao() + " Venceu!");
-	}
+        } while (!truco.fimDeJogo());
+
+        System.out.println("Jogador " + truco.verificaPontuacao() + " Venceu!");
+    }
 
 }
