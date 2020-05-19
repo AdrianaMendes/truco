@@ -4,37 +4,37 @@ import java.util.ArrayList;
 
 public class Mao {
 
-    private final ArrayList<Carta> cartasMao;
+	private ArrayList<Carta> cartasMao;
 
-    private int qtdCartasMao;
+	private int qtdCartasMao;
 
-    Mao() {
-        cartasMao = new ArrayList<>();
+	Mao() {
+		cartasMao = new ArrayList<Carta>();
 
-    }
+	}
 
-    public Carta getCartasIndice(int v) {
-        return this.cartasMao.get(v);
+	public Carta getCartasIndice(int v) {
+		return this.cartasMao.get(v);
 
-    }
+	}
 
-    public void descartar(int c) {
-        cartasMao.remove(c);
-        qtdCartasMao--;
+	public void descartar(int c) {
+		cartasMao.remove(c);
+		qtdCartasMao--;
 
-    }
+	}
 
-    public void recebeCarta(Carta[] a) {
-        qtdCartasMao = 3;
-        cartasMao.clear();
-        cartasMao.add(a[0]);
-        cartasMao.add(a[1]);
-        cartasMao.add(a[2]);
+	public void recebeCarta(Carta[] a) {
+		qtdCartasMao = 3;
+		cartasMao.clear();
+		cartasMao.add(a[0]);
+		cartasMao.add(a[1]);
+		cartasMao.add(a[2]);
 
-    }
+	}
 
-    public int getQtdCartasMao() {
-        return qtdCartasMao;
-    }
+	public int getQtdCartasMao() {
+		return qtdCartasMao;
+	}
 
 }
