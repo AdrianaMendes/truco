@@ -2,23 +2,19 @@ package jogoTruco;
 
 import java.util.ArrayList;
 
-public class Monte {
-
+public class Monte {  
     private final ArrayList<Carta> boloCartas;
-
     private final ArrayList<Integer> idJogadores;
+    private static Monte instancia = null;
 
     private Monte() {
         this.boloCartas = new ArrayList<>();
         this.idJogadores = new ArrayList<>();
     }
 
-    private static Monte instancia = null;
-
     public static Monte getInstancia() {
         if (instancia == null) {
             instancia = new Monte();
-
         }
         return instancia;
     }
@@ -32,7 +28,6 @@ public class Monte {
         }
         this.boloCartas.add(i, x);
         this.idJogadores.add(i, y);
-
     }
 
     public void teste() {
@@ -50,21 +45,16 @@ public class Monte {
     }
 
     public boolean checkAmarrado() {
-
         for (int i = boloCartas.size() - 2; i >= 0; i--) {
             if (boloCartas.get(i).verificaMesmoValor(boloCartas.get(boloCartas.size() - 1))) {
-
                 if (idJogadores.get(i) % 2 != idJogadores.get(idJogadores.size() - 1) % 2) {
                     return true;
-
                 }
-
             } else {
                 return false;
             }
         }
         return false;
-
     }
 
     public void limpaMonte() {
@@ -74,7 +64,5 @@ public class Monte {
 
     public int retonaSize() {
         return boloCartas.size();
-
     }
-
 }

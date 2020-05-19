@@ -3,7 +3,6 @@ package jogoTruco;
 import java.util.Scanner;
 
 public class Truco {
-
     private final Jogador[] jogadores;
     private int Pontuacao1 = 0;
     private int Pontuacao2 = 0;
@@ -159,7 +158,6 @@ public class Truco {
     }
 
     public void menuJogaTruco() {
-
         boolean flag;
         do {
             System.out.println("\n---Jogador " + (vezRodada + 1) + "----");
@@ -172,9 +170,7 @@ public class Truco {
             System.out.println("2.Pedir " + this.estadoRodada());
             Scanner entrada = new Scanner(System.in);
             int a = entrada.nextInt();
-
             flag = false;
-
             try {
                 switch (a) {
                     case 1:
@@ -199,7 +195,6 @@ public class Truco {
     }
 
     private void menuAceitaRecusa() {
-
         boolean flag;
         do {
             if (vezRodada == 3) {
@@ -212,7 +207,6 @@ public class Truco {
             System.out.println("2.Recusa");
             Scanner entrada = new Scanner(System.in);
             int s = entrada.nextInt();
-
             flag = false;
             try {
                 switch (s) {
@@ -229,25 +223,20 @@ public class Truco {
                     default:
                         throw new OpcaoInvalidaException();
                 }
-
             } catch (OpcaoInvalidaException e) {
                 System.out.println(e.getMessage());
                 flag = true;
             }
-
         } while (flag);
-
     }
 
     private void menuImprimirCartas() {
-
         boolean flag;
         do {
             System.out.println("Jogador " + (vezRodada + 1));
             for (int i = 0; i < this.jogadores[vezRodada].getMaoJogador().getQtdCartasMao(); i++) {
                 System.out
                         .println(i + 1 + "." + this.jogadores[vezRodada].getMaoJogador().getCartasIndice(i).toString());
-
             }
             Scanner entrada = new Scanner(System.in);
             int s = entrada.nextInt() - 1;
@@ -256,18 +245,14 @@ public class Truco {
                 if (s < 0 || s > this.jogadores[vezRodada].getMaoJogador().getQtdCartasMao() - 1) {
                     throw new OpcaoInvalidaException();
                 }
-
                 Carta c1 = this.jogadores[vezRodada].getMaoJogador().getCartasIndice(s);
                 monte.adicionarMonte(new Carta(c1), vezRodada);
                 this.jogadores[vezRodada].getMaoJogador().descartar(s);
-
             } catch (OpcaoInvalidaException e) {
                 System.out.println(e.getMessage());
                 flag = true;
             }
-
         } while (flag);
-
     }
 
     public int verificaPontuacao() {
@@ -280,7 +265,6 @@ public class Truco {
 
     private String estadoRodada() {
         String y;
-
         switch (this.valorRodada) {
             case 4:
                 y = "seis";
