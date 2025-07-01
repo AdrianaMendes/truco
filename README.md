@@ -16,8 +16,8 @@ Para mais informações acesse o arquivo :scroll:`LICENSE.md`.
 
 # Contato
 
-:email: E-Mail: ​[adriana.cardoso@aluno.ufop.edu.br](adriana.cardoso@aluno.ufop.edu.br) 
+**Adriana Cardoso**  
+Desenvolvedora Java | Spring Boot | Angular  
 
-:clipboard: Linkedin: ​[https://www.linkedin.com/in/adriana-mendes-engenheira-de-computacao/](https://www.linkedin.com/in/adriana-mendes-engenheira-de-computacao/)
-
-:package: GitHub:  [https://github.com/AdrianaMendes](https://github.com/AdrianaMendes)
+- [LinkedIn](https://www.linkedin.com/in/amendescardoso/)  
+- 📧 adrianamirianmc@gmail.com
