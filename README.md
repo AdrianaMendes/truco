@@ -10,7 +10,7 @@ Este repositório é um trabalho acadêmico desenvolvido em Java para simular o 
 
 # Licença
 
-Este projeto está sob licença [MIT](https://choosealicense.com/licenses/mit/) © 2020 Adriana Mirian Mendes Cardoso. 
+Este projeto está sob licença [MIT](https://choosealicense.com/licenses/mit/) © 2020 Adriana Cardoso. 
 
 Para mais informações acesse o arquivo :scroll:`LICENSE.md`.
 
