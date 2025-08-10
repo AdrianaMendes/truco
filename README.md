@@ -17,7 +17,5 @@ Para mais informações acesse o arquivo :scroll:`LICENSE.md`.
 # Contato
 
 **Adriana Cardoso**  
-Desenvolvedora Java | Spring Boot | Angular  
-
-- [LinkedIn](https://www.linkedin.com/in/amendescardoso/)  
+Desenvolvedora Java | Spring Boot | Angular 
 - 📧 adrianamirianmc@gmail.com
